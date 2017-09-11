@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>bbs</display-name>
+  <welcome-file-list>
+    <welcome-file>/WEB-INF/bbs.jsp</welcome-file>
+  </welcome-file-list>
+
+  <listener>
+  	<listener-class>com.pknu.bbs.BBSListenerImpl</listener-class>
+  </listener>
+
+  <context-param> <!-- 어플리케이션 내장객체에 설정되어있는 파라미터값 -->
+  	<param-name>pageSize</param-name>
+  	<param-value>10</param-value>
+  </context-param>
+
+  <context-param>
+  	<param-name>pageBlock</param-name>
+  	<param-value>10</param-value>
+  </context-param>
+  
+  <context-param>
+  	<param-name>saveDir</param-name>
+  	<param-value>d:\uploadKch\</param-value>
+  </context-param>
+  
+<!--   <servlet> -->
+  
+<!-- 	<servlet-name>Bbss</servlet-name> -->
+<!-- 	<servlet-class>com.pknu.bbs.BBSServlet</servlet-class> -->
+<!--   	<init-param> -->
+<!-- 	  <param-name>bbsp</param-name> -->
+<!-- 	  <param-value>D:\workspace_kch\ee\bbs\WebContent\WEB-INF\bbs.properties</param-value> -->
+<!--   	</init-param> -->
+  	
+<!--   	<multipart-config> -->
+<!--   		<location>d:\temp\</location> -->
+<!--   		<max-file-size>-1</max-file-size> -->
+<!--   		<max-request-size>-1</max-request-size> -->
+<!--   		<file-size-threshold>1024</file-size-threshold> -->
+<!--   	</multipart-config> -->
+  	
+<!--   </servlet> -->
+  
+<!--   <servlet-mapping> -->
+<!--   	<servlet-name>Bbss</servlet-name> -->
+<!--   	<url-pattern>*.bbs</url-pattern> -->
+<!--   </servlet-mapping> -->
+  
+  <session-config>
+  	<session-timeout>5</session-timeout>
+  </session-config>
+  
+</web-app>

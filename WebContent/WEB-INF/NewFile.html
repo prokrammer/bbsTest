@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<img src='images/hot.png' width='30' height='9'>			
+		} else {
+			sb.append("<img src='images/hot.png' width='30' height='9'");
+			sb.append(" onclick='location.href=\"list.bbs?pageNum=");
+			sb.append(startPage - pageBlock);
+			sb.append("\"' style='cursor:pointer'> ");
+		}
+		
+		sb.append("&nbsp;&nbsp;|");
+		for(int i = startPage; i <= endPage; i++) {		
+			if(i == pageNum) {
+				sb.append("&nbsp;&nbsp;<b><font color='#91B7EF'>");
+				sb.append(i);
+				sb.append("</font></b>");
+			} else {
+				sb.append("&nbsp;&nbsp;<a href='list.bbs?pageNum=");
+				sb.append(i);
+				sb.append("'>");
+				sb.append(i);
+				sb.append("</a>");
+			}
+		}
+		
+		sb.append("&nbsp;&nbsp;|");		
+		if(endPage < totalPage) {
+			sb.append("<img src='images/hot.png' width='30' height='9'");
+			sb.append(" onclick='location.href=\"list.bbs?pageNum=");
+			sb.append(startPage + pageBlock);
+			sb.append("\"' style='cursor:pointer'> ");
+		} else {
+			sb.append("<img src='images/hot.png' width='30' height='9'>");
+</body>
+</html>
